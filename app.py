@@ -132,10 +132,10 @@ st.deck_gl_chart(
 
 
 # Show Soure
-# if show_source_data:
-#     st.subheader("Source Data")
-#     st.markdown(f"[{source_url}]({source_url})")
-#     st.dataframe(source_data)
+show_source_data = st.checkbox('Show Source')
+if show_source_data:
+    st.subheader("Source Data")
+    st.dataframe(data.head(20))
 
 
 

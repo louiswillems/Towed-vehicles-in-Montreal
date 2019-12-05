@@ -19,12 +19,8 @@ Recommend using conda or pipenv to sandbox your work
 
 The [data](http://donnees.ville.montreal.qc.ca/dataset/remorquages-de-vehicules-genants/resource/e62322fb-3e14-4ee0-b724-a77190dac8e7) show vehicles towed by the City of Montreal since 2016. Towing is performed for example during snow removal, construction work or during special events.
 
-### Manual Install 
-
-Run:
+### Run
 
 ```
 streamlit run app.py
 ```
-
-Note: Install all the libraries that are imported in app.py in order to succeesfully run the project.
