@@ -1,7 +1,7 @@
 
 # Visualizing Towed vehicles in Montreal
 
-Web app tutorial project made with streamlit. [See the app](http://donnees.ville.montreal.qc.ca)
+Web app tutorial project made with streamlit. [See the app](https://towed-vehicles-montreal.herokuapp.com/)
 
 You can use Streamlit to create interactive Data Science pages, deployable to the web through all major deployment surfaces.
 
