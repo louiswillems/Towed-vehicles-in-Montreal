@@ -5,7 +5,7 @@ Web app tutorial project made with streamlit. [See the app](http://donnees.ville
 
 You can use Streamlit to create interactive Data Science pages, deployable to the web through all major deployment surfaces. 
 
-![Current State](https://user-images.githubusercontent.com/33185528/67614707-9e50f300-f78f-11e9-9811-c817474ea571.png)
+![Current State](https://github.com/louiswillems/Towed-vehicles-in-Montreal/blob/master/app.py.png)
 
 ## Getting Started
 
