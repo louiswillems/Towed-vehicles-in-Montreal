@@ -1,15 +1,14 @@
 """
-Yahoo Finance Data app
+Visualizing Towed vehicles in Montreal
 
-Author: Paduel https://github.com/paduel
-Original Source: https://github.com/paduel/streamlit_finance_chart
+Author: Louis Willems https://github.com/louiswillems
+Original Source: https://github.com/louiswillems/Towed-vehicles-in-Montreal/blob/master/app.py
 """
 
 
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
 import altair as alt
 
 
