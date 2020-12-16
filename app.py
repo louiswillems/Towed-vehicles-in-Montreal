@@ -12,16 +12,14 @@ import numpy as np
 import altair as alt
 
 
-st.image("http://www.epipaysage.com/wp-content/uploads/2016/05/Logo_Montréal.svg_.png",
-             use_column_width=True)
+st.image("images/logo_montreal.png", use_column_width=True)
 
 
 st.title("Visualizing towed vehicles in the city of Montreal 🚗")
 
 st.markdown("<br><br>", unsafe_allow_html=True) 
 
-
-st.write("The [data](http://donnees.ville.montreal.qc.ca/dataset/remorquages-de-vehicules-genants/resource/e62322fb-3e14-4ee0-b724-a77190dac8e7) show vehicles towed by the City of Montreal since 2016. Towing is performed for example during snow removal, construction work or during special events.")
+st.write("The [data](https://data.montreal.ca/dataset/1d785ef8-f883-47b5-bac5-dce1cdddb1b0/resource/65dd096f-7296-40e8-8cfe-e26b928bcce5/download/remorquages.csv) show vehicles towed by the City of Montreal since 2016. Towing is performed for example during snow removal, construction work or during special events.")
 
 st.write("Use **filters** to pick a specific **Year**, **Month**, **Day** and **Hour** and explore the data. [See source code](https://github.com/streamlit/demo-uber-nyc-pickups/blob/master/app.py)")
 
@@ -38,7 +36,7 @@ st.markdown("<div align='center'><br>"
 @st.cache
 def load_data():
 
-    data = pd.read_csv('http://donnees.ville.montreal.qc.ca/dataset/1d785ef8-f883-47b5-bac5-dce1cdddb1b0/resource/e62322fb-3e14-4ee0-b724-a77190dac8e7/download/remorquages.csv')
+    data = pd.read_csv('data/remorquages.csv')
 
     # Clean
     data = data.drop(['SECTEUR_ORIGINE', 'SECTEUR_DESTINATION'], axis=1)
@@ -60,7 +58,7 @@ def load_data():
     data['days'] = data['date'].dt.day_name()
 
     # Data from 2015 is incomplete
-    data = data[(data['date'] >= '2016-01-01') & (data['date'] <= '2019-11-30')]
+    data = data[(data['date'] >= '2016-01-01') & (data['date'] <= '2020-12-01')]
 
     return data
 
