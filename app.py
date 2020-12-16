@@ -36,7 +36,7 @@ st.markdown("<div align='center'><br>"
 @st.cache
 def load_data():
 
-    data = pd.read_csv('data/remorquages.csv')
+    data = pd.read_csv('https://data.montreal.ca/dataset/1d785ef8-f883-47b5-bac5-dce1cdddb1b0/resource/65dd096f-7296-40e8-8cfe-e26b928bcce5/download/remorquages.csv')
 
     # Clean
     data = data.drop(['SECTEUR_ORIGINE', 'SECTEUR_DESTINATION'], axis=1)
@@ -58,7 +58,7 @@ def load_data():
     data['days'] = data['date'].dt.day_name()
 
     # Data from 2015 is incomplete
-    data = data[(data['date'] >= '2016-01-01') & (data['date'] <= '2020-12-01')]
+    data = data[(data['date'] >= '2016-01-01') & (data['date'] <= data['date'].max())]
 
     return data
 
